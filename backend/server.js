@@ -6,13 +6,13 @@ const dotenv = require('dotenv');
 // Load env variables from .env
 dotenv.config();
 
-const app = express();
-app.use(express.json());
-// Configure CORS: allow a specific frontend origin in production
-const CLIENT_URL = process.env.CLIENT_URL || '*';
-if (CLIENT_URL === '*' || CLIENT_URL === 'true') {
+const CLIENT_URL = process.env.CLIENT_URL;
+
+if (!CLIENT_URL) {
+  // Development or open access
   app.use(cors());
 } else {
+  // Production
   app.use(
     cors({
       origin: CLIENT_URL,
