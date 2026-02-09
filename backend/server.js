@@ -17,7 +17,7 @@ if (!CLIENT_URL) {
   // Production
   app.use(
     cors({
-      origin: CLIENT_URL,
+      origin: process.env.CLIENT_URL,
       credentials: true,
     })
   );
