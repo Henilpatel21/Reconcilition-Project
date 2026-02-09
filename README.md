@@ -74,15 +74,6 @@ VITE_API_URL=<backend-api-url>
 - **Audit Logging**: Complete audit trail of all system activities
 - **Dashboard Analytics**: Visual insights with charts and metrics
 
-## API Health Check
-
-```bash
-curl http://localhost:5000/api/health
-```
-
-## Deployment
-
-See [deploy.md](./deploy.md) for detailed Render and Vercel deployment instructions.
 
 ## Project Structure
 
