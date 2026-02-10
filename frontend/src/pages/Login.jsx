@@ -19,7 +19,7 @@ export default function Login(){
       const res = await apiLogin({ email, password });
       login(res.token, res.user);
       toast.show('Logged in', 'success');
-      navigate('/auth');
+      navigate('/');
     }catch(err){
       setError(err?.response?.data?.message || 'Login failed');
       toast.show('Login failed', 'danger');
