@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const { log } = require('../utils/logger');
 
-app.use(express.json());
 
 /**
  * Helper: sign JWT for a user
